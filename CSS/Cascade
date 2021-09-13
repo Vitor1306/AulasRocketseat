@@ -1,0 +1,17 @@
+    Seu estilo é lido de cima para baixo, ou seja, caso haja algum selector com informações conflitantes, o mais embaixo é o que será atribuído.
+
+São levados em consideração 3 fatores:
+
+A origem do estilo;
+
+A especificidade;
+
+A importância;
+
+inline > tag style > tag link
+
+sintaxe: !important
+
+São raras as ocasiões nas quais se devem usar um iportant, pois é em geral uma má pratica, visto que quebra o fluxo natural da cascata e pode acabar te atrapalhando caso você a deixe em algum lugar no seu código.
+
+Portanto evite ao máximo seu uso.
