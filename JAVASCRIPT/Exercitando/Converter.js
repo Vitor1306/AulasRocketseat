@@ -11,11 +11,23 @@ function transformDegree(degree) {
     if(!celsiusExists && !fahrenheitExists) {
         throw new Error('Grau nao identificado')
     }
+
+    //Fluxo ideal F -> C
+    let updateDegree = Number(degree.toUpperCase().replace("F", ""));
+    let formula = (fahrenheit) => (fahrenheit - 32) * 5/9
+    let degreeSign = 'C'
+
+    if(celsiusExists) {
+         updateDegree = Number(degree.toUpperCase().replace("C", ""));
+         formula = celsius => celsius * 9/5 + 32
+         degreeSign = 'F'
+    }
+
 }
 
 try {
-    transformDegree('50F')
-    transformDegree('50Z')
+    console.log(transformDegree('50F'))
+  // transformDegree('50Z')
 } catch (error) {
     console.log(error)
 }

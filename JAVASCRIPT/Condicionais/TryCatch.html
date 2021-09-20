@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and Catch example</title>
+</head>
+
+<script>
+
+    var num; //Maximo 10
+
+    try {
+        num=prompt("Digite um valor");
+        if(num>10){
+            throw new Error("Valor invalido, maximo 10")
+        }
+    }catch (error) {
+        console.log("ERRO: " +error.message); //apresenta no console
+        num=10; //Corrige o valor 
+    }finally{
+        document.write("Valor: " +num) //printa na tela
+    }
+
+
+</script>
+
+
+</html>
