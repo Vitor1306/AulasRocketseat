@@ -1,0 +1,32 @@
+/*
+
+Quando o position é absolute o elemento é deslocado saindo do fluxo normal. O elemento de position absolute é posicionado em relação ao seu parent element mais próximo. Se esse elemento "pai" não existir, ele será posicionando em relação ao bloco contendo a raiz do elemento.
+
+HTML
+
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+
+*/ 
+
+.box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+  
+  .box1 {
+    background-color: red;
+    position: absolute;
+    left: 100px;
+    top: 80px
+  }
+  
+  .box2 {
+    background-color: green;
+  }
+  
+  .box3 {
+    background-color: blue;
+  }
